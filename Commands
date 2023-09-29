@@ -1,0 +1,129 @@
+create database temp1;
+
+ drop database temp1;
+
+use temp;
+
+create table student(id int primary key, name varchar(50), age int not null);
+
+insert into student values(1,"AMAN",26);
+
+select * from student; 
+_______________________________
+ddl-data defintion language -create,alter,rename,truncate,drop
+dql-data query language -select
+dml-data manipulation language:insert,update,delete
+dcl-data control language:grant,revoke
+tcl-transaction control language-start transaction,commit,rollback
+_______________________________
+
+show tables;
+show databases;
+
+_________________________
+create databases temp1;
+drop databaases temp1;
+
+____________________________ ____________
+insert into emp (id)  values (1);
+________________________________________
+limit
+
+for liniting the entry in table
+
+create table newtab(age int check(age>=18));
+Query OK, 0 rows affected (0.02 sec)
+
+____________________________________________________
+
+if we have to select uniue values in column
+
+select distinct city from student;
+
+
+________________________________________________
+
+clauses
+1.where
+select *from student where age >=10;
+
+select * from student where   city in ("delehi","mumbai");
+
+______________________________________________________
+
+return the number of rows 
+select * from strudent limit 3; 
+__________________________________________________
+
+order by clause
+
+select * student order by city asc;
+___________________________________
+select avg(marks) from student;
+____________________________________
+select Max(marks) from student;
+_______________________________    ___
+
+select count(roll no) from student;
+___________________________________
+
+select city,count(rollno) from student  group by city
+
+
+______________________________________________________________
+
+
+having clause-used to applu condition on group by clause
+select city,count(roll no) from student group by city having max(marks) > 90
+_________________________________________________________________________
+gerneral order
+select
+from
+where
+group by
+having
+order by
+______________________________________
+where->rows
+having->group
+
+_______________________________________ 
+
+
+update student
+set grade="0"
+where grade ="a"
+
+_______________________________
+
+delete from student where marks < 33
+
+___________________________________________
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
