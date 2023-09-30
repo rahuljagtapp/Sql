@@ -101,18 +101,77 @@ delete from student where marks < 33
 ___________________________________________
 
 
+alter-to changes the sechema
+
+add column;
+alter table tablename 
+add column columnname  datatype;
+
+change column-name
+alter table tablename
+change column old name new name new datatyoe;
 
 
+modify datatype/constraints
+alter table tablename
+modify colname newdataype new constraint;
+----------------------------------------------
+
+truncate 
+truncate is used for deleting a table;
+___________________________________________
+joins
+inner join-common data in two table;
+select * from student inner join course on sid==cid;
 
 
+outer join:
+left join- all the data from left table+common data;
+right join-all the data from right table+comm data;
+full join-all the data;
 
 
+full join
+
+left 
+union
+right
 
 
+_________________________________
+
+self join
+
+___________________
+
+union
+
+select column name from table
+union
+select column name from table2
+
+____________________________________
+
+sql subquery 
+using where clause;
+select name,marks from student
+where marks > (select avg(marks) from student);
+
+select name from student where rollno in (select rollno from student where rollno%2==0);
+
+using from
+select max(marks) from (select * from student where city="delhi");
 
 
+__________________________________
 
+viwes
 
+ create view view name as select rollno,name from student;
+
+drop view view1;
+
+select * from view1;
 
 
 
